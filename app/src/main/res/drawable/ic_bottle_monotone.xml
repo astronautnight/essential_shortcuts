@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- Bottle Body Silhouette (Monotone) -->
+    <!-- Pointing directly upwards (North = 0 degrees) -->
+    <path
+        android:pathData="M52,16 C52,10 54,6 60,6 C66,6 68,10 68,16 L68,36 C68,40 76,46 76,56 L76,108 C76,112 72,116 60,116 C48,116 44,112 44,108 L44,56 C44,46 52,40 52,36 Z"
+        android:strokeColor="#333333"
+        android:strokeWidth="4"
+        android:strokeLineJoin="round"
+        android:fillColor="#0D000000" />
+        
+    <!-- Bottle Opening/Cap -->
+    <path
+        android:pathData="M50,16 L70,16 M50,10 L70,10"
+        android:strokeColor="#333333"
+        android:strokeWidth="4"
+        android:strokeLineCap="round" />
+
+    <!-- Label to indicate up/down visually -->
+    <path
+        android:pathData="M50,60 L70,60 L70,86 L50,86 Z"
+        android:strokeColor="#333333"
+        android:strokeWidth="3"
+        android:fillColor="#00000000"/>
+
+</vector>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="100"
+    android:viewportHeight="100">
+
+    <!-- White backing so icon is visible on the blue button -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M18,2 L82,2 Q98,2 98,18 L98,82 Q98,98 82,98 L18,98 Q2,98 2,82 L2,18 Q2,2 18,2 Z"/>
+
+    <!-- Ko-fi blue inner square -->
+    <path android:fillColor="#29ABE0"
+        android:pathData="M20,6 L80,6 Q94,6 94,20 L94,80 Q94,94 80,94 L20,94 Q6,94 6,80 L6,20 Q6,6 20,6 Z"/>
+
+    <!-- Cup rim (black) -->
+    <path android:fillColor="#231F20"
+        android:pathData="M16,32 L78,32 Q82,32 82,36 L82,40 L14,40 Q10,40 10,36 Q10,32 16,32 Z"/>
+
+    <!-- Cup body outer (black) -->
+    <path android:fillColor="#231F20"
+        android:pathData="M16,40 L78,40 L74,84 Q74,88 70,88 L24,88 Q20,88 20,84 Z"/>
+
+    <!-- Cup body inner (white) -->
+    <path android:fillColor="#FFFFFF"
+        android:pathData="M20,44 L74,44 L71,82 Q71,85 68,85 L26,85 Q23,85 23,82 Z"/>
+
+    <!-- Handle (black C-shape) -->
+    <path android:fillColor="#231F20"
+        android:pathData="M74,50 Q89,50 89,62 Q89,74 74,74 L74,68 Q83,68 83,62 Q83,56 74,56 Z"/>
+
+    <!-- Orange-red heart (matching real Ko-fi logo) -->
+    <path android:fillColor="#F05A28"
+        android:pathData="M47,78 C47,78 32,66 32,59 C32,52 39,49 47,57 C55,49 62,52 62,59 C62,66 47,78 47,78 Z"/>
+</vector>

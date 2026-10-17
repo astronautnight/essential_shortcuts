@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Fraction: numerator / denominator with line -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M5.41,20L4,18.59L18.59,4L20,5.41z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M8,3C9.66,3 11,4.34 11,6S9.66,9 8,9S5,7.66 5,6S6.34,3 8,3zM8,5C7.45,5 7,5.45 7,6S7.45,7 8,7S9,6.55 9,6S8.55,5 8,5z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M16,15C17.66,15 19,16.34 19,18S17.66,21 16,21S13,19.66 13,18S14.34,15 16,15zM16,17C15.45,17 15,17.45 15,18S15.45,19 16,19S17,18.55 17,18S16.55,17 16,17z" />
+</vector>

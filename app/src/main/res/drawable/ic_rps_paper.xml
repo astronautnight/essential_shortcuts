@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- Paper Document Outline -->
+    <path
+        android:pathData="M 30,15 L 70,15 L 95,40 L 95,105 C 95,108 92,111 89,111 L 30,111 C 27,111 24,108 24,105 L 24,21 C 24,18 27,15 30,15 Z"
+        android:strokeColor="#333333"
+        android:strokeWidth="5"
+        android:strokeLineJoin="round"
+        android:fillColor="#0D000000" />
+        
+    <!-- Folded Corner -->
+    <path
+        android:pathData="M 70,15 L 70,40 L 95,40"
+        android:strokeColor="#333333"
+        android:strokeWidth="5"
+        android:strokeLineJoin="round" />
+        
+    <!-- Document Lines -->
+    <path
+        android:pathData="M 40,55 L 80,55 M 40,75 L 80,75 M 40,95 L 65,95"
+        android:strokeColor="#333333"
+        android:strokeWidth="4"
+        android:strokeLineCap="round" />
+
+</vector>

@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Material Design 2014 Gmail-style compose sheet in gorgeous Orange -->
+<ViewFlipper
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/view_flipper"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:inAnimation="@android:anim/fade_in"
+    android:outAnimation="@android:anim/fade_out">
+
+    <!-- ═══════ CHILD 0 : COMPOSE ═══════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#FFFFFF">
+
+        <!-- ── MD2014 Toolbar: Orange primary, 4dp elevation ── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="4dp"
+            android:paddingEnd="8dp"
+            android:background="@color/primary_orange"
+            android:elevation="4dp">
+
+            <!-- Back / discard -->
+            <ImageView
+                android:id="@+id/btn_cancel"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="12dp"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="#FFFFFF"
+                android:contentDescription="Discard"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+            <!-- Title -->
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="New Message"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-medium"
+                android:letterSpacing="-0.01"/>
+
+            <!-- Schedule Send -->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_schedule"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="12dp"
+                android:src="@drawable/ic_send_schedule"
+                android:contentDescription="Schedule Send"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:tint="#FFFFFF"
+                app:tint="#FFFFFF"
+                android:layout_marginEnd="4dp"/>
+
+            <!-- Send -->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_send"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="12dp"
+                android:src="@drawable/ic_send"
+                android:contentDescription="Send"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:tint="#FFFFFF"
+                app:tint="#FFFFFF"/>
+
+        </LinearLayout>
+
+        <!-- ── Send progress bar (GONE until send tapped) ── -->
+        <ProgressBar
+            android:id="@+id/pb_send_progress"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:max="100"
+            android:progress="0"
+            android:progressTint="@color/primary_orange"
+            android:progressBackgroundTint="@color/orange_light"
+            android:visibility="gone"/>
+
+        <!-- ── Field rows ── -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:overScrollMode="never"
+            android:nestedScrollingEnabled="false">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- FROM row -->
+                <LinearLayout
+                    android:id="@+id/row_account"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="56dp"
+                        android:layout_height="wrap_content"
+                        android:text="From"
+                        android:textSize="14sp"
+                        android:textColor="#9E9E9E"
+                        android:fontFamily="sans-serif"/>
+
+                    <TextView
+                        android:id="@+id/tv_from_account"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:text="Tap to configure account"
+                        android:textSize="14sp"
+                        android:textColor="#212121"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:fontFamily="sans-serif"/>
+
+                    <ImageView
+                        android:layout_width="18dp"
+                        android:layout_height="18dp"
+                        android:src="@drawable/ic_chevron_right"
+                        app:tint="#BDBDBD"
+                        android:contentDescription="Change account"/>
+                </LinearLayout>
+
+                <!-- Inset divider -->
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:layout_marginStart="16dp" android:background="#E0E0E0"/>
+
+                <!-- TO row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="56dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp">
+
+                    <TextView
+                        android:layout_width="56dp"
+                        android:layout_height="wrap_content"
+                        android:text="To"
+                        android:textSize="14sp"
+                        android:textColor="#9E9E9E"
+                        android:fontFamily="sans-serif"/>
+
+                    <EditText
+                        android:id="@+id/et_to"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:background="@null"
+                        android:hint="Recipients"
+                        android:inputType="textEmailAddress"
+                        android:importantForAutofill="no"
+                        android:imeOptions="actionNext"
+                        android:textSize="14sp"
+                        android:textColor="#212121"
+                        android:textColorHint="#9E9E9E"
+                        android:maxLines="3"
+                        android:fontFamily="sans-serif"/>
+                </LinearLayout>
+
+                <!-- Inset divider -->
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:layout_marginStart="16dp" android:background="#E0E0E0"/>
+
+                <!-- CC/BCC TOGGLE row -->
+                <LinearLayout
+                    android:id="@+id/row_cc_toggle"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground">
+
+                    <TextView
+                        android:layout_width="56dp"
+                        android:layout_height="wrap_content"
+                        android:text="Cc/Bcc"
+                        android:textSize="14sp"
+                        android:textColor="#9E9E9E"
+                        android:fontFamily="sans-serif"/>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:text="Add Cc or Bcc"
+                        android:textSize="14sp"
+                        android:textColor="#BDBDBD"
+                        android:fontFamily="sans-serif"/>
+                </LinearLayout>
+
+                <!-- CC row (hidden) -->
+                <LinearLayout
+                    android:id="@+id/layout_cc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="56dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="56dp"
+                        android:layout_height="wrap_content"
+                        android:text="Cc"
+                        android:textSize="14sp"
+                        android:textColor="#9E9E9E"
+                        android:fontFamily="sans-serif"/>
+
+                    <EditText
+                        android:id="@+id/et_cc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:background="@null"
+                        android:hint="Cc recipients"
+                        android:inputType="textEmailAddress"
+                        android:importantForAutofill="no"
+                        android:imeOptions="actionNext"
+                        android:textSize="14sp"
+                        android:textColor="#212121"
+                        android:textColorHint="#9E9E9E"
+                        android:maxLines="2"
+                        android:fontFamily="sans-serif"/>
+                </LinearLayout>
+
+                <!-- BCC row (hidden) -->
+                <LinearLayout
+                    android:id="@+id/layout_bcc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="56dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:paddingTop="6dp"
+                    android:paddingBottom="6dp"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="56dp"
+                        android:layout_height="wrap_content"
+                        android:text="Bcc"
+                        android:textSize="14sp"
+                        android:textColor="#9E9E9E"
+                        android:fontFamily="sans-serif"/>
+
+                    <EditText
+                        android:id="@+id/et_bcc"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        android:background="@null"
+                        android:hint="Bcc recipients"
+                        android:inputType="textEmailAddress"
+                        android:importantForAutofill="no"
+                        android:imeOptions="actionNext"
+                        android:textSize="14sp"
+                        android:textColor="#212121"
+                        android:textColorHint="#9E9E9E"
+                        android:maxLines="2"
+                        android:fontFamily="sans-serif"/>
+                </LinearLayout>
+
+                <!-- Inset divider before subject -->
+                <View android:layout_width="match_parent" android:layout_height="1dp"
+                    android:layout_marginStart="16dp" android:background="#E0E0E0"/>
+
+                <!-- SUBJECT row -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp">
+
+                    <EditText
+                        android:id="@+id/et_subject"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:hint="Subject"
+                        android:inputType="textCapSentences"
+                        android:importantForAutofill="no"
+                        android:imeOptions="actionNext"
+                        android:textSize="16sp"
+                        android:textColor="#212121"
+                        android:textColorHint="#9E9E9E"
+                        android:fontFamily="sans-serif-medium"
+                        android:lines="1"
+                        android:maxLines="1"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- Full-width divider before body -->
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="#E0E0E0"/>
+
+        <!-- ── Body ── -->
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:fillViewport="true"
+            android:overScrollMode="ifContentScrolls">
+
+            <LinearLayout
+                android:id="@+id/layout_body_blocks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:animateLayoutChanges="true"/>
+        </ScrollView>
+
+        <!-- Attachment chips -->
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chip_group_attachments"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="4dp"
+            android:visibility="gone"/>
+
+        <!-- Full-width divider above bottom bar -->
+        <View android:layout_width="match_parent" android:layout_height="1dp"
+            android:background="#E0E0E0"/>
+
+        <!-- ── MD2014 Bottom icon bar ── -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="4dp"
+            android:paddingEnd="4dp"
+            android:background="#FFFFFF">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_attach"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="12dp"
+                android:src="@drawable/ic_attach"
+                android:contentDescription="Attach"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:tint="#757575"
+                app:tint="#757575"/>
+
+            <TextView
+                android:id="@+id/tv_attach_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/primary_orange"
+                android:fontFamily="sans-serif-medium"
+                android:visibility="gone"
+                android:layout_marginEnd="4dp"/>
+
+            <Space android:layout_width="0dp" android:layout_height="1dp" android:layout_weight="1"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_save_template"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="12dp"
+                android:src="@drawable/ic_template"
+                android:contentDescription="Templates"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:tint="#757575"
+                app:tint="#757575"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btn_account"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="12dp"
+                android:src="@drawable/ic_account"
+                android:contentDescription="Account"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"
+                android:tint="#757575"
+                app:tint="#757575"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    <!-- ═══════ CHILD 1 : TEMPLATES ═══════ -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#F5F5F5">
+
+        <!-- Templates toolbar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingStart="4dp"
+            android:paddingEnd="16dp"
+            android:background="@color/primary_orange"
+            android:elevation="4dp">
+
+            <ImageView
+                android:id="@+id/btn_back_compose"
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:padding="12dp"
+                android:src="@drawable/ic_arrow_back"
+                app:tint="#FFFFFF"
+                android:contentDescription="Back"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackgroundBorderless"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:text="Templates"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:fontFamily="sans-serif-medium"/>
+        </LinearLayout>
+
+        <!-- Save current compose as template card -->
+        <LinearLayout
+            android:id="@+id/card_save_current_template"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/settings_row_bg"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:padding="16dp"
+            android:elevation="2dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <!-- Plus Icon inside Orange Circle -->
+            <FrameLayout
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@drawable/bg_circle_dark"
+                android:backgroundTint="@color/primary_orange"
+                android:layout_marginEnd="16dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_add"
+                    app:tint="#FFFFFF"/>
+            </FrameLayout>
+
+            <!-- Text Content -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Save Current Message"
+                    android:textSize="15sp"
+                    android:textColor="#212121"
+                    android:fontFamily="sans-serif-medium"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Create a template from your current text"
+                    android:textSize="12sp"
+                    android:textColor="#757575"
+                    android:fontFamily="sans-serif"
+                    android:layout_marginTop="2dp"/>
+            </LinearLayout>
+
+            <!-- Arrow Right -->
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:src="@drawable/ic_chevron_right"
+                app:tint="#BDBDBD"/>
+        </LinearLayout>
+
+        <!-- Empty state -->
+        <TextView
+            android:id="@+id/tv_no_templates"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No saved templates yet.\nCompose an email and tap the templates icon."
+            android:textColor="#9E9E9E"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:padding="40dp"
+            android:lineSpacingMultiplier="1.4"
+            android:visibility="gone"/>
+
+        <!-- Template list -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_templates"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:clipToPadding="false"
+            android:nestedScrollingEnabled="true"/>
+
+    </LinearLayout>
+
+</ViewFlipper>

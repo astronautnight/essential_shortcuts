@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Stacked PDF documents representing combine/merge -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M16,9H13V4a2,2 0,0 0,-2 -2H5A2,2 0,0 0,3 4v10a2,2 0,0 0,2 2h3v4a2,2 0,0 0,2 2h8a2,2 0,0 0,2 -2V11a2,2 0,0 0,-2 -2zM5,14V4h6v5h5L11,14H5zm13,5H10v-8h3v5h5v3z"/>
+</vector>

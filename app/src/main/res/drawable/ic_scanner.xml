@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Scan frame with crosshair -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M3,3h5v2H5v3H3V3zM16,3h5v5h-2V5h-3V3zM3,16h2v3h3v2H3v-5zM19,19v-3h2v5h-5v-2h3z" />
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M7,7h10v10H7V7zM9,9v6h6V9H9z" />
+</vector>

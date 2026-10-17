@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- App Theme Colors -->
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary_blue">#007AFF</color>
+    <color name="primary_orange">#FF9800</color>
+    <color name="orange_dark">#E65100</color>
+    <color name="orange_light">#FFE0B2</color>
+    <color name="nav_inactive">#8E8E93</color>
+
+    <!-- Category Colors -->
+    <color name="category_calculator">#5856D6</color>
+    
+    <!-- Sci-Fi Scientific Calculator Colors -->
+    <color name="sci_fi_bg">#1A1A24</color>
+    <color name="sci_fi_display_bg">#252535</color>
+    <color name="sci_fi_display_text">#00E5FF</color>
+    <color name="sci_fi_btn_numpad_bg">#2D2D3F</color>
+    <color name="sci_fi_btn_numpad_text">#FFFFFF</color>
+    <color name="sci_fi_btn_sci_bg">#38384D</color>
+    <color name="sci_fi_btn_sci_text">#B0BEC5</color>
+    <color name="sci_fi_btn_nav_bg">#303045</color>
+    <color name="sci_fi_btn_nav_text">#FFFFFF</color>
+    <color name="sci_fi_btn_operator_bg">#4A4A6A</color>
+    <color name="sci_fi_btn_operator_text">#00E5FF</color>
+    <color name="sci_fi_btn_ac_bg">#FF4081</color>
+    <color name="sci_fi_btn_ac_text">#FFFFFF</color>
+    <color name="sci_fi_btn_equals_bg">#00C853</color>
+    <color name="sci_fi_btn_equals_text">#FFFFFF</color>
+    <color name="sci_fi_menu_bar">#12121A</color>
+    <color name="category_text_tools">#FF3B30</color>
+    <color name="category_generator">#34C759</color>
+    <color name="category_image">#FF9500</color>
+    <color name="category_converter">#00C7BE</color>
+    <color name="category_color_tools">#FF2D55</color>
+    <color name="category_essential">#007AFF</color>
+    <color name="category_playground">#5A5A5A</color>
+
+    <!-- Background Colors -->
+    <color name="background_light">#F2F2F7</color>
+    <color name="card_background">#FFFFFF</color>
+    <color name="blur_overlay">#99F2F2F7</color>
+    
+    <!-- Navigation Bar Design -->
+    <color name="glass_color">#E6FFFFFF</color> <!-- 90% white -->
+    <color name="glass_gradient_start">#B3FFFFFF</color> <!-- 70% white - bottom -->
+    <color name="glass_gradient_end">#E6FFFFFF</color> <!-- 90% white - top -->
+    <color name="glass_border">#1A000000</color> <!-- 10% black stroke -->
+    <color name="nav_active_background">#10000000</color>
+
+    <!-- Calculator Colors (Light Mode) -->
+    <color name="calc_background">#F2F2F7</color> <!-- Light gray background -->
+    <color name="calc_display_bg">#E5E5EA</color>
+    <color name="calc_display_text_primary">#000000</color>
+    <color name="calc_display_text_secondary">#8E8E93</color>
+    <color name="calc_btn_number_bg">#FFFFFF</color>
+    <color name="calc_btn_number_text">#000000</color>
+    <color name="calc_btn_operator_bg">#007AFF</color> <!-- iOS Blue-like -->
+    <color name="calc_btn_operator_text">#FFFFFF</color>
+    <color name="calc_btn_function_bg">#E5E5EA</color>
+    <color name="calc_btn_function_text">#000000</color>
+    <color name="calc_divider">#C6C6C8</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#000000</color>
+    <color name="text_secondary">#6C6C70</color>
+
+    <!-- QR Code Generator Colors -->
+    <color name="qr_action_button_bg">#FF000000</color>
+    <color name="qr_action_button_text">#FFFFFFFF</color>
+    
+    <!-- QR Card Colors (Text) -->
+    <color name="qr_card_bg_text">#E3F2FD</color>
+    <color name="qr_card_fg_text">#1976D2</color>
+    
+    <!-- QR Card Colors (Email) -->
+    <color name="qr_card_bg_email">#E8F5E9</color>
+    <color name="qr_card_fg_email">#388E3C</color>
+    
+    <!-- QR Card Colors (Phone) -->
+    <color name="qr_card_bg_phone">#FFF3E0</color>
+    <color name="qr_card_fg_phone">#F57C00</color>
+    
+    <!-- QR Card Colors (SMS) -->
+    <color name="qr_card_bg_sms">#F3E5F5</color>
+    <color name="qr_card_fg_sms">#7B1FA2</color>
+    <!-- Password Generator Card Colors -->
+    <color name="pwd_card_bg_generate">#E8F5E9</color>
+    <color name="pwd_card_fg_generate">#388E3C</color>
+    <color name="pwd_card_bg_saved">#E3F2FD</color>
+    <color name="pwd_card_fg_saved">#1976D2</color>
+    <color name="pwd_result_bg">#F5F5F5</color>
+    <color name="pwd_save_btn_bg">#388E3C</color>
+
+    <!-- Case Converter Button Colors -->
+    <color name="case_btn_lower_bg">#E3F2FD</color>
+    <color name="case_btn_lower_fg">#1565C0</color>
+    <color name="case_btn_upper_bg">#FFF3E0</color>
+    <color name="case_btn_upper_fg">#E65100</color>
+    <color name="case_btn_invert_bg">#F3E5F5</color>
+    <color name="case_btn_invert_fg">#6A1B9A</color>
+
+    <!-- Image Share Chooser Colors -->
+    <color name="share_card_bg_resize">#FFF3E0</color>
+    <color name="share_card_fg_resize">#E65100</color>
+    <color name="share_card_bg_rounded">#FFF8E1</color>
+    <color name="share_card_fg_rounded">#FF8F00</color>
+    <color name="share_card_bg_compress">#FFEBEE</color>
+    <color name="share_card_fg_compress">#C62828</color>
+    <color name="share_card_bg_pixel">#FCE4EC</color>
+    <color name="share_card_fg_pixel">#AD1457</color>
+    <color name="share_card_bg_jpgpng">#E0F2F1</color>
+    <color name="share_card_fg_jpgpng">#00695C</color>
+    <color name="share_card_bg_pdf">#E8EAF6</color>
+    <color name="share_card_fg_pdf">#283593</color>
+    <color name="share_card_bg_webp">#F3E5F5</color>
+    <color name="share_card_fg_webp">#6A1B9A</color>
+
+    <!-- Adaptive Share Sheet Colors (Light Mode Default) -->
+    <color name="share_dialog_bg">#F2EFEFEF</color>
+    <color name="share_dialog_inner_bg">#FFFFFF</color>
+    <color name="share_dialog_text">#000000</color>
+    <color name="share_dialog_subtext">#8E8E93</color>
+    <color name="share_dialog_divider">#E5E5EA</color>
+    <color name="share_dialog_icon_bg">#E5E5EA</color>
+
+    <!-- T.LY Affiliate Card Colors -->
+    <color name="tly_card_bg">#F4F7FC</color>
+    <color name="tly_card_stroke">#E2E9F3</color>
+    <color name="tly_badge_bg">#E3F2FD</color>
+    <color name="tly_badge_text">#1976D2</color>
+</resources>

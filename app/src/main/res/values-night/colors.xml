@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Background Colors -->
+    <color name="background_light">#000000</color>
+    <color name="card_background">#1C1C1E</color>
+    <color name="blur_overlay">#80000000</color>
+
+    <!-- Category Colors (slightly desaturated for dark mode) -->
+    <color name="category_calculator">#6968C0</color>
+    <color name="category_text_tools">#E5524A</color>
+    <color name="category_generator">#4ABF6A</color>
+    <color name="category_image">#E5A030</color>
+    <color name="category_converter">#30B8B2</color>
+    <color name="category_color_tools">#E54A6A</color>
+    <color name="category_essential">#3088E5</color>
+    <color name="category_playground">#707070</color>
+
+    <!-- Navigation Bar Design (Dark Mode) -->
+    <color name="glass_color">#CC1C1C1E</color> <!-- 80% dark gray -->
+    <color name="glass_gradient_start">#B31C1C1E</color> <!-- 70% dark gray - bottom -->
+    <color name="glass_gradient_end">#E61C1C1E</color> <!-- 90% dark gray - top -->
+    <color name="glass_border">#33FFFFFF</color> <!-- 20% white stroke -->
+    <color name="nav_active_background">#33FFFFFF</color>
+
+    <!-- Calculator Colors (Dark Mode) -->
+    <color name="calc_background">#000000</color>
+    <color name="calc_display_bg">#2C2C2E</color>
+    <color name="calc_display_text_primary">#FFFFFF</color>
+    <color name="calc_display_text_secondary">#8E8E93</color>
+    <color name="calc_btn_number_bg">#1C1C1E</color>
+    <color name="calc_btn_number_text">#FFFFFF</color>
+    <color name="calc_btn_operator_bg">#0A84FF</color>
+    <color name="calc_btn_operator_text">#FFFFFF</color>
+    <color name="calc_btn_function_bg">#2C2C2E</color>
+    <color name="calc_btn_function_text">#FFFFFF</color>
+    <color name="calc_divider">#38383A</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#8E8E93</color>
+
+    <!-- QR Code Generator Colors -->
+    <color name="qr_action_button_bg">#FFFFFFFF</color>
+    <color name="qr_action_button_text">#FF000000</color>
+
+    <!-- QR Card Colors (Text) - Darker Background, Lighter Text -->
+    <color name="qr_card_bg_text">#0D47A1</color> <!-- Dark Blue -->
+    <color name="qr_card_fg_text">#BBDEFB</color> <!-- Light Blue -->
+
+    <!-- QR Card Colors (Email) -->
+    <color name="qr_card_bg_email">#1B5E20</color> <!-- Dark Green -->
+    <color name="qr_card_fg_email">#C8E6C9</color> <!-- Light Green -->
+
+    <!-- QR Card Colors (Phone) -->
+    <color name="qr_card_bg_phone">#E65100</color> <!-- Dark Orange -->
+    <color name="qr_card_fg_phone">#FFCC80</color> <!-- Light Orange -->
+
+    <!-- QR Card Colors (SMS) -->
+    <color name="qr_card_bg_sms">#4A148C</color> <!-- Dark Purple -->
+    <color name="qr_card_fg_sms">#E1BEE7</color> <!-- Light Purple -->
+    <!-- Password Generator Card Colors -->
+    <color name="pwd_card_bg_generate">#1B5E20</color>
+    <color name="pwd_card_fg_generate">#A5D6A7</color>
+    <color name="pwd_card_bg_saved">#0D47A1</color>
+    <color name="pwd_card_fg_saved">#90CAF9</color>
+    <color name="pwd_result_bg">#2C2C2E</color>
+    <color name="pwd_save_btn_bg">#66BB6A</color>
+
+    <!-- Case Converter Button Colors -->
+    <color name="case_btn_lower_bg">#0D47A1</color>
+    <color name="case_btn_lower_fg">#90CAF9</color>
+    <color name="case_btn_upper_bg">#BF360C</color>
+    <color name="case_btn_upper_fg">#FFCC80</color>
+    <color name="case_btn_invert_bg">#4A148C</color>
+    <color name="case_btn_invert_fg">#CE93D8</color>
+
+    <!-- Adaptive Share Sheet Colors (Dark Mode) -->
+    <color name="share_dialog_bg">#F2121212</color>
+    <color name="share_dialog_inner_bg">#F22C2C2E</color>
+    <color name="share_dialog_text">#FFFFFF</color>
+    <color name="share_dialog_subtext">#AEAEB2</color>
+    <color name="share_dialog_divider">#3A3A3C</color>
+    <color name="share_dialog_icon_bg">#2C2C2E</color>
+
+    <!-- T.LY Affiliate Card Colors -->
+    <color name="tly_card_bg">#25282F</color>
+    <color name="tly_card_stroke">#333842</color>
+    <color name="tly_badge_bg">#0D47A1</color>
+    <color name="tly_badge_text">#90CAF9</color>
+</resources>

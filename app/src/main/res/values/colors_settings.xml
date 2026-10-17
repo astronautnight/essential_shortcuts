@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Settings page backgrounds — LIGHT MODE -->
+    <color name="settings_dark_bg">#F2F2F7</color>       <!-- iOS-style light gray page bg -->
+    <color name="settings_row_dark_bg">#FFFFFF</color>    <!-- White card rows -->
+    <color name="settings_divider_dark">#C6C6C8</color>   <!-- Light divider -->
+    <color name="settings_text_primary_dark">#000000</color>
+    <color name="settings_text_secondary_dark">#8E8E93</color>
+    <color name="settings_text_yellow">#FFCC00</color>
+    <!-- In light mode use a white-based tint so the top bar blends with the page bg -->
+    <color name="settings_blur_overlay">#E6F2F2F7</color>
+    <!-- Navigation/accent color — iOS blue is readable on white; yellow is not -->
+    <color name="settings_nav_accent">#007AFF</color>
+
+    <!-- Icon colors — same in both modes (they're on coloured pill backgrounds) -->
+    <color name="settings_icon_blue">#0A84FF</color>
+    <color name="settings_icon_gray">#8E8E93</color>
+    <color name="settings_icon_orange">#FF9500</color>
+    <color name="settings_icon_teal">#5AC8FA</color>
+    <color name="settings_icon_green">#34C759</color>
+    <color name="settings_icon_red">#FF3B30</color>
+    <color name="settings_icon_yellow">#FFCC00</color>
+
+    <color name="settings_premium_start">#D93B30</color>
+    <color name="settings_premium_end">#E3A824</color>
+</resources>

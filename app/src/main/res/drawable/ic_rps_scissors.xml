@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- Upper Blade -->
+    <path
+        android:pathData="M 50,60 L 105,25 L 97,15 L 45,55"
+        android:strokeColor="#333333"
+        android:strokeWidth="4"
+        android:strokeLineJoin="round"
+        android:fillColor="#0D000000" />
+        
+    <!-- Lower Blade -->
+    <path
+        android:pathData="M 50,60 L 105,95 L 97,105 L 45,65"
+        android:strokeColor="#333333"
+        android:strokeWidth="4"
+        android:strokeLineJoin="round"
+        android:fillColor="#0D000000" />
+        
+    <!-- Upper Handle -->
+    <path
+        android:pathData="M 45,55 L 38,45 C 32,35 15,35 20,55 C 23,65 35,63 42,60"
+        android:strokeColor="#333333"
+        android:strokeWidth="5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000" />
+        
+    <!-- Lower Handle -->
+    <path
+        android:pathData="M 45,65 L 38,75 C 32,85 15,85 20,65 C 23,55 35,57 42,60"
+        android:strokeColor="#333333"
+        android:strokeWidth="5"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="#00000000" />
+        
+    <!-- Center Screw -->
+    <path
+        android:pathData="M 48,60 A 2,2 0 1 1 52,60 A 2,2 0 1 1 48,60 Z"
+        android:fillColor="#333333" />
+
+</vector>

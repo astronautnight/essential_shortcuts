@@ -1,0 +1,99 @@
+
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Base.Theme.ClaudeEssential" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary -->
+        <item name="colorPrimary">@color/category_essential</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">#D6E4FF</item>
+        <item name="colorOnPrimaryContainer">#001B3E</item>
+
+        <!-- Secondary -->
+        <item name="colorSecondary">#535F70</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">#D7E3F8</item>
+        <item name="colorOnSecondaryContainer">#101C2B</item>
+
+        <!-- Tertiary -->
+        <item name="colorTertiary">#6B5778</item>
+        <item name="colorOnTertiary">@color/white</item>
+        <item name="colorTertiaryContainer">#F3DAFF</item>
+        <item name="colorOnTertiaryContainer">#251432</item>
+
+        <!-- Error -->
+        <item name="colorError">#BA1A1A</item>
+        <item name="colorOnError">@color/white</item>
+        <item name="colorErrorContainer">#FFDAD6</item>
+        <item name="colorOnErrorContainer">#410002</item>
+
+        <!-- Surface & Background — this is the key to consistent look -->
+        <item name="colorSurface">@color/background_light</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorSurfaceVariant">#DFE2EB</item>
+        <item name="colorOnSurfaceVariant">@color/text_secondary</item>
+        <item name="colorSurfaceContainerLowest">@color/white</item>
+        <item name="colorSurfaceContainerLow">#F5F3F7</item>
+        <item name="colorSurfaceContainer">#EFEDF1</item>
+        <item name="colorSurfaceContainerHigh">#E9E7EC</item>
+        <item name="colorSurfaceContainerHighest">#E4E1E6</item>
+
+        <!-- Outline -->
+        <item name="colorOutline">#73777F</item>
+        <item name="colorOutlineVariant">#C3C6CF</item>
+
+        <!-- System bars -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowBackground">@color/background_light</item>
+        <item name="android:windowTranslucentNavigation">false</item>
+
+        <!-- Disable M3 elevation tinting — prevents the purple-ish overlay on elevated surfaces -->
+        <item name="elevationOverlayEnabled">false</item>
+    </style>
+
+    <style name="Theme.ClaudeEssential" parent="Base.Theme.ClaudeEssential" />
+    <style name="CalculatorButton">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">0dp</item>
+        <item name="android:layout_columnWeight">1</item>
+        <item name="android:layout_rowWeight">1</item>
+        <item name="android:layout_margin">6dp</item>
+        <item name="cornerRadius">50dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+
+    <style name="Theme.ClaudeEssential.Popup" parent="Theme.Material3.DayNight.Dialog">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@style/PopupAnimationStyle</item>
+        
+        <!-- Subtle dimming -->
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.45</item>
+        
+        <!-- Background blur for Android 12+ -->
+        <item name="android:windowBackgroundBlurRadius" tools:targetApi="31">20dp</item>
+    </style>
+
+    <style name="PopupAnimationStyle" parent="@android:style/Animation.Activity">
+        <item name="android:windowEnterAnimation">@anim/popup_enter</item>
+        <item name="android:windowExitAnimation">@anim/popup_exit</item>
+    </style>
+
+    <!-- Transparent overlay theme used by WidgetLaunchActivity.
+         Completely transparent — no dim, no background, no animation.
+         The homescreen shows through so the tick animation appears to float on the widget. -->
+    <style name="Theme.ClaudeEssential.WidgetLaunch" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+</resources>

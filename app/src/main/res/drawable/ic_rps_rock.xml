@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- Rock / Stone Polygon -->
+    <path
+        android:pathData="M 40,20 L 80,20 L 105,50 L 90,100 L 30,100 L 15,50 Z"
+        android:strokeColor="#333333"
+        android:strokeWidth="5"
+        android:strokeLineJoin="round"
+        android:fillColor="#0D000000" />
+        
+    <!-- Inner faceted lines to give it a 3D faceted stone look -->
+    <path
+        android:pathData="M 40,20 L 60,60 L 80,20 M 15,50 L 60,60 L 105,50 M 60,60 L 50,100 M 60,60 L 70,100"
+        android:strokeColor="#333333"
+        android:strokeWidth="3"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+</vector>

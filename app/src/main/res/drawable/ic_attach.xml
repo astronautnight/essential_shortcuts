@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Sleek Modern Paperclip Icon -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M16.5,6v11.5c0,2.21 -1.79,4 -4,4s-4,-1.79 -4,-4V5c0,-3.31 2.69,-6 6,-6s6,2.69 6,6v12.5c0,4.42 -3.58,8 -8,8s-8,-3.58 -8,-8V6h2v11.5c0,3.31 2.69,6 6,6s6,-2.69 6,-6V5c0,-2.21 -1.79,-4 -4,-4s-4,1.79 -4,4v12.5c0,1.1 0.9,2 2,2s2,-0.9 2,-2V6h2z"/>
+</vector>

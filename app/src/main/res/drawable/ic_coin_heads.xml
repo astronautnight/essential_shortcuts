@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- Outer rim (adds 3D thickness) -->
+    <path
+        android:pathData="M60,60m-56,0a56,56 0,1 1,112 0a56,56 0,1 1,-112 0"
+        android:strokeColor="#333333"
+        android:strokeWidth="4"
+        android:fillColor="#1A000000" /> <!-- Subtle fill for depth -->
+
+    <!-- Inner face offset for 3D ridge effect -->
+    <path
+        android:pathData="M60,60m-50,0a50,50 0,1 1,100 0a50,50 0,1 1,-100 0"
+        android:strokeColor="#333333"
+        android:strokeWidth="2"
+        android:fillColor="#0D000000" />
+
+    <!-- Centered H -->
+    <path
+        android:pathData="M44,40 L44,80 M44,60 L76,60 M76,40 L76,80"
+        android:strokeColor="#333333"
+        android:strokeWidth="8"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+
+</vector>

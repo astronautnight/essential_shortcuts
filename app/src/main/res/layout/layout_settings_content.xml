@@ -1,0 +1,741 @@
+<?xml version="1.0" encoding="utf-8"?>
+        <LinearLayout
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <!-- Premium Banner -->
+            <LinearLayout
+                android:id="@+id/row_premium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_settings_premium"
+                android:orientation="horizontal"
+                android:padding="16dp"
+                android:gravity="center_vertical"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?attr/selectableItemBackground">
+                
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+                    
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Support development"
+                        android:textColor="@color/settings_text_primary_dark"
+                        android:textSize="17sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+                
+                <FrameLayout
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:background="@drawable/bg_circle_dark"
+                    android:backgroundTint="#40FFFFFF">
+                    <ImageView
+                        android:layout_width="16dp"
+                        android:layout_height="16dp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_chevron_right"
+                        app:tint="@color/settings_text_yellow" />
+                </FrameLayout>
+            </LinearLayout>
+
+            <!-- Support Icons -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="24dp">
+                
+                <LinearLayout
+                    android:id="@+id/btn_patreon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginEnd="24dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+                    
+                    <ImageView
+                        android:layout_width="68dp"
+                        android:layout_height="68dp"
+                        android:src="@drawable/ic_patreon"
+                        android:background="@drawable/bg_circle_dark"
+                        android:padding="16dp" />
+                        
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Patreon"
+                        android:textColor="@color/settings_text_secondary_dark"
+                        android:textSize="13sp"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+                    
+                <LinearLayout
+                    android:id="@+id/btn_kofi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:layout_marginEnd="24dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+                    
+                    <ImageView
+                        android:layout_width="68dp"
+                        android:layout_height="68dp"
+                        android:src="@drawable/ic_kofi"
+                        android:background="@drawable/bg_circle_dark"
+                        android:padding="16dp" />
+                        
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Ko-fi"
+                        android:textColor="@color/settings_text_secondary_dark"
+                        android:textSize="13sp"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+                    
+                <LinearLayout
+                    android:id="@+id/btn_upi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackgroundBorderless">
+                    
+                    <ImageView
+                        android:layout_width="68dp"
+                        android:layout_height="68dp"
+                        android:src="@drawable/ic_upi"
+                        android:background="@drawable/bg_circle_dark"
+                        android:padding="16dp" />
+                        
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="UPI"
+                        android:textColor="@color/settings_text_secondary_dark"
+                        android:textSize="13sp"
+                        android:layout_marginTop="8dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Group 1: Notes Settings -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/settings_row_dark_bg"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    
+                    <!-- Sort Notes By -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground">
+                        
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/bg_settings_icon_base"
+                            app:backgroundTint="@color/settings_icon_blue"
+                            android:src="@drawable/ic_all_tools"
+                            android:padding="5dp"
+                            app:tint="@color/white" />
+                            
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Sort Shortcuts By"
+                            android:textColor="@color/settings_text_primary_dark"
+                            android:textSize="17sp"
+                            android:layout_marginStart="16dp" />
+                            
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Date Edited"
+                            android:textColor="@color/settings_text_secondary_dark"
+                            android:textSize="17sp" />
+                            
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_chevron_right"
+                            app:tint="@color/settings_text_secondary_dark"
+                            android:layout_marginStart="8dp" />
+                    </LinearLayout>
+                    
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/settings_divider_dark" android:layout_marginStart="60dp" />
+                    
+                    <!-- New Notes Start With -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground">
+                        
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/bg_settings_icon_base"
+                            app:backgroundTint="@color/settings_icon_blue"
+                            android:src="@drawable/ic_edit"
+                            android:padding="5dp"
+                            app:tint="@color/white" />
+                            
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="New Shortcuts Start With"
+                            android:textColor="@color/settings_text_primary_dark"
+                            android:textSize="17sp"
+                            android:layout_marginStart="16dp" />
+                            
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Title"
+                            android:textColor="@color/settings_text_secondary_dark"
+                            android:textSize="17sp" />
+                            
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_chevron_right"
+                            app:tint="@color/settings_text_secondary_dark"
+                            android:layout_marginStart="8dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Group 2: Theme -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/settings_row_dark_bg"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                android:layout_marginBottom="24dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    
+                    <!-- Theme Mode -->
+                    <LinearLayout
+                        android:id="@+id/row_theme_mode"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground">
+                        
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/bg_settings_icon_base"
+                            app:backgroundTint="@color/settings_icon_blue"
+                            android:src="@drawable/ic_theme_mode"
+                            android:padding="5dp"
+                            app:tint="@color/white" />
+                            
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Theme Mode"
+                            android:textColor="@color/settings_text_primary_dark"
+                            android:textSize="17sp"
+                            android:layout_marginStart="16dp" />
+                            
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dark"
+                            android:textColor="@color/settings_text_secondary_dark"
+                            android:textSize="17sp" />
+                            
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_chevron_right"
+                            app:tint="@color/settings_text_secondary_dark"
+                            android:layout_marginStart="8dp" />
+                    </LinearLayout>
+                    
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/settings_divider_dark" android:layout_marginStart="60dp" />
+                    
+                    <!-- Color Theme -->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground">
+                        
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/bg_settings_icon_base"
+                            app:backgroundTint="@color/settings_icon_red"
+                            android:src="@drawable/ic_color_picker"
+                            android:padding="5dp"
+                            app:tint="@color/white" />
+                            
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Color Theme"
+                            android:textColor="@color/settings_text_primary_dark"
+                            android:textSize="17sp"
+                            android:layout_marginStart="16dp" />
+                            
+                        <ImageView
+                            android:layout_width="16dp"
+                            android:layout_height="16dp"
+                            android:src="@drawable/bg_circle_dark"
+                            app:tint="@color/settings_text_yellow"
+                            android:layout_marginEnd="8dp" />
+                            
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_rate_us"
+                            app:tint="@color/settings_text_secondary_dark" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Group 3: Backup (hidden for now) -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/settings_row_dark_bg"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground">
+                    
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:background="@drawable/bg_settings_icon_base"
+                        app:backgroundTint="@color/settings_icon_teal"
+                        android:src="@drawable/ic_backup_cloud"
+                        android:padding="5dp"
+                        app:tint="@color/white" />
+                        
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Backup"
+                        android:textColor="@color/settings_text_primary_dark"
+                        android:textSize="17sp"
+                        android:layout_marginStart="16dp" />
+                        
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_rate_us"
+                        app:tint="@color/settings_text_secondary_dark" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="Create or restore a backup"
+                android:textColor="@color/settings_text_secondary_dark"
+                android:textSize="13sp"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="24dp" />
+
+            <!-- Group 4: Passcode (hidden for now) -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:cardBackgroundColor="@color/settings_row_dark_bg"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="16dp"
+                    android:paddingEnd="16dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?attr/selectableItemBackground">
+                    
+                    <ImageView
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:background="@drawable/bg_settings_icon_base"
+                        app:backgroundTint="@color/settings_icon_gray"
+                        android:src="@drawable/ic_privacy"
+                        android:padding="5dp"
+                        app:tint="@color/white" />
+                        
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Passcode"
+                        android:textColor="@color/settings_text_primary_dark"
+                        android:textSize="17sp"
+                        android:layout_marginStart="16dp" />
+                        
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_rate_us"
+                        app:tint="@color/settings_text_secondary_dark" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:text="Lock your app with a passcode"
+                android:textColor="@color/settings_text_secondary_dark"
+                android:textSize="13sp"
+                android:paddingStart="16dp"
+                android:paddingTop="8dp"
+                android:paddingBottom="24dp" />
+
+            <!-- Group 5: Rate, Share, Contact -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/settings_row_dark_bg"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                android:layout_marginBottom="24dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    
+                    <!-- Rate Us -->
+                    <LinearLayout
+                        android:id="@+id/row_rate_us"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground">
+                        
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/bg_settings_icon_base"
+                            app:backgroundTint="@color/settings_icon_orange"
+                            android:src="@drawable/ic_rate_us"
+                            android:padding="5dp"
+                            app:tint="@color/white" />
+                            
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Rate Us"
+                            android:textColor="@color/settings_text_primary_dark"
+                            android:textSize="17sp"
+                            android:layout_marginStart="16dp" />
+                            
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_chevron_right"
+                            app:tint="@color/settings_text_secondary_dark" />
+                    </LinearLayout>
+                    
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/settings_divider_dark" android:layout_marginStart="60dp" />
+                    
+                    <!-- Share App -->
+                    <LinearLayout
+                        android:id="@+id/row_share"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground">
+                        
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/bg_settings_icon_base"
+                            app:backgroundTint="@color/settings_icon_teal"
+                            android:src="@drawable/ic_send"
+                            android:padding="5dp"
+                            app:tint="@color/white" />
+                            
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Share App"
+                            android:textColor="@color/settings_text_primary_dark"
+                            android:textSize="17sp"
+                            android:layout_marginStart="16dp" />
+                            
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_chevron_right"
+                            app:tint="@color/settings_text_secondary_dark" />
+                    </LinearLayout>
+                    
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/settings_divider_dark" android:layout_marginStart="60dp" />
+                    
+                    <!-- Contact -->
+                    <LinearLayout
+                        android:id="@+id/row_contact"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground">
+                        
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/bg_settings_icon_base"
+                            app:backgroundTint="@color/settings_icon_blue"
+                            android:src="@drawable/ic_chat"
+                            android:padding="5dp"
+                            app:tint="@color/white" />
+                            
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Contact"
+                            android:textColor="@color/settings_text_primary_dark"
+                            android:textSize="17sp"
+                            android:layout_marginStart="16dp" />
+                            
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_chevron_right"
+                            app:tint="@color/settings_text_secondary_dark" />
+                    </LinearLayout>
+                    
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/settings_divider_dark" android:layout_marginStart="60dp" />
+                    
+                    <!-- Reddit -->
+                    <LinearLayout
+                        android:id="@+id/row_reddit"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground">
+                        
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/bg_settings_icon_base"
+                            app:backgroundTint="#FF4500"
+                            android:src="@drawable/ic_reddit"
+                            android:padding="5dp"
+                            app:tint="@color/white" />
+                            
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Join our Reddit Community"
+                            android:textColor="@color/settings_text_primary_dark"
+                            android:textSize="17sp"
+                            android:layout_marginStart="16dp" />
+                            
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_chevron_right"
+                            app:tint="@color/settings_text_secondary_dark" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Group 6: Data Management -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/settings_row_dark_bg"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                android:layout_marginBottom="24dp">
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    
+                    <!-- Export Data -->
+                    <LinearLayout
+                        android:id="@+id/row_export_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground">
+                        
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/bg_settings_icon_base"
+                            app:backgroundTint="@color/settings_icon_blue"
+                            android:src="@drawable/ic_import"
+                            android:padding="5dp"
+                            app:tint="@color/white" />
+                            
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Export Data"
+                            android:textColor="@color/settings_text_primary_dark"
+                            android:textSize="17sp"
+                            android:layout_marginStart="16dp" />
+                            
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_chevron_right"
+                            app:tint="@color/settings_text_secondary_dark" />
+                    </LinearLayout>
+                    
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/settings_divider_dark" android:layout_marginStart="60dp" />
+                    
+                    <!-- Import Data -->
+                    <LinearLayout
+                        android:id="@+id/row_import_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="44dp"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:paddingStart="16dp"
+                        android:paddingEnd="16dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:foreground="?attr/selectableItemBackground">
+                        
+                        <ImageView
+                            android:layout_width="28dp"
+                            android:layout_height="28dp"
+                            android:background="@drawable/bg_settings_icon_base"
+                            app:backgroundTint="@color/settings_icon_orange"
+                            android:src="@drawable/ic_export"
+                            android:padding="5dp"
+                            app:tint="@color/white" />
+                            
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="Import Data"
+                            android:textColor="@color/settings_text_primary_dark"
+                            android:textSize="17sp"
+                            android:layout_marginStart="16dp" />
+                            
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@drawable/ic_chevron_right"
+                            app:tint="@color/settings_text_secondary_dark" />
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>

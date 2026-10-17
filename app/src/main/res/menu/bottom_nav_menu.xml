@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_recent"
+        android:icon="@drawable/ic_recent"
+        android:title="Recent" />
+
+    <item
+        android:id="@+id/navigation_all_tools"
+        android:icon="@drawable/ic_all_tools"
+        android:title="Shortcuts" />
+</menu>

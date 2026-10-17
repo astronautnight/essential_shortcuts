@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/widget_container_double"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="4dp">
+
+    <!-- Tool 1 -->
+    <FrameLayout
+        android:id="@+id/widget_tool_1"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginEnd="2dp"
+        android:background="@drawable/widget_gradient_essential"
+        android:clickable="true"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/widget_icon_1"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="top|start"
+            android:src="@android:drawable/ic_menu_edit"
+            android:contentDescription="Tool icon" />
+
+        <TextView
+            android:id="@+id/widget_name_1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:text="Tool"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:maxLines="2"
+            android:ellipsize="end" />
+    </FrameLayout>
+
+    <!-- Tool 2 -->
+    <FrameLayout
+        android:id="@+id/widget_tool_2"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginStart="2dp"
+        android:background="@drawable/widget_gradient_essential"
+        android:clickable="true"
+        android:padding="12dp">
+
+        <ImageView
+            android:id="@+id/widget_icon_2"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="top|start"
+            android:src="@android:drawable/ic_menu_edit"
+            android:contentDescription="Tool icon" />
+
+        <TextView
+            android:id="@+id/widget_name_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|start"
+            android:text="Tool"
+            android:textColor="#FFFFFF"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:maxLines="2"
+            android:ellipsize="end" />
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="400dp"
+    android:height="860dp"
+    android:viewportWidth="400"
+    android:viewportHeight="860">
+
+    <!-- Outer body of the phone with large rounded corners (Pixel 10 style) -->
+    <path
+        android:fillColor="#1A1A1A"
+        android:pathData="M56,0 L344,0 C372.72,0 396,23.28 396,52 L396,808 C396,836.72 372.72,860 344,860 L56,860 C27.28,860 4,836.72 4,808 L4,52 C4,23.28 27.28,0 56,0 Z"/>
+
+    <!-- Inner bezel / border highlight -->
+    <path
+        android:fillColor="#2A2A2A"
+        android:pathData="M56,4 L344,4 C370.51,4 392,25.49 392,52 L392,808 C392,834.51 370.51,856 344,856 L56,856 C29.49,856 8,834.51 8,808 L8,52 C8,25.49 29.49,4 56,4 Z"/>
+
+    <!-- Screen cutout area (this is where the screenshot goes, it's transparent) -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M38,50 L362,50 C370.84,50 378,57.16 378,66 L378,794 C378,802.84 370.84,810 362,810 L38,810 C29.16,810 22,802.84 22,794 L22,66 C22,57.16 29.16,50 38,50 Z"/>
+
+    <!-- Camera punch-hole cutout (Pixel 10 centered) -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M200,30 m-8,0 a8,8 0,1 1,16 0 a8,8 0,1 1,-16 0"/>
+
+    <!-- Side button - Power (right side) -->
+    <path
+        android:fillColor="#333333"
+        android:pathData="M396,180 L400,180 L400,230 L396,230 Z"/>
+
+    <!-- Side button - Volume (right side) -->
+    <path
+        android:fillColor="#333333"
+        android:pathData="M396,260 L400,260 L400,340 L396,340 Z"/>
+
+</vector>

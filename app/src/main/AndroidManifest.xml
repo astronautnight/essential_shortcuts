@@ -1,0 +1,448 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-feature android:name="android.hardware.camera" android:required="false" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.ClaudeEssential">
+        <activity
+
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".BasicCalculatorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ScientificCalculatorActivity"
+            android:exported="false" />
+        <activity
+            android:name=".QrCodeGeneratorActivity"
+            android:exported="false"
+            android:label="QR Code Generator"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".AgeCalculatorActivity"
+            android:exported="false"
+            android:label="Calculate Age"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".DaysUntilActivity"
+            android:exported="false"
+            android:label="Days Until"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".PercentageCalculatorActivity"
+            android:exported="false"
+            android:label="Calculte Percentage"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".AverageCalculatorActivity"
+            android:exported="false"
+            android:label="Average Calculator"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".FractionSimplifierActivity"
+            android:exported="false"
+            android:label="Simplify Fraction"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".FactorialCalculatorActivity"
+            android:exported="false"
+            android:label="Factorial Calculator"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".BarcodeGeneratorActivity"
+            android:exported="false"
+            android:label="Make a Barcode"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".PasswordGeneratorActivity"
+            android:exported="false"
+            android:label="Generate Password"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".CaseConverterActivity"
+            android:exported="false"
+            android:label="Case Converter"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".RepeatTextActivity"
+            android:exported="false"
+            android:label="Repeat Text"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".MorseCodeActivity"
+            android:exported="false"
+            android:label="Morse Code Converter"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".NumberGeneratorActivity"
+            android:exported="false"
+            android:label="Generate random  number"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".ImageResizerActivity"
+            android:exported="false"
+            android:label="Image Resizer"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".MemeGeneratorActivity"
+            android:exported="false"
+            android:label="Meme Generator"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".RoundedImageActivity"
+            android:exported="false"
+            android:label="Rounded Image"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".ImageCompressorActivity"
+            android:exported="false"
+            android:label="Compress Image"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".LuckyWheelActivity"
+            android:exported="false"
+            android:label="Lucky Wheel"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".MultiNumberGeneratorActivity"
+            android:exported="false"
+            android:label="Multi Number Generator"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".FlipCoinActivity"
+            android:exported="false"
+            android:label="Flip Coin"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".RockPaperScissorActivity"
+            android:exported="false"
+            android:label="Rock Paper Scissors"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".SpinBottleActivity"
+            android:exported="false"
+            android:label="Spin Bottle"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".RollDiceActivity"
+            android:exported="false"
+            android:label="Roll Dice"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity
+            android:name=".ImageConverterActivity"
+            android:exported="false"
+            android:label="Convert Image"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".TextToPdfActivity"
+            android:exported="false"
+            android:label="Text to PDF"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".PdfCombineActivity"
+            android:exported="false"
+            android:label="Combine PDFs"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".WordPdfConverterActivity"
+            android:exported="false"
+            android:label="Word &amp; PDF Converter"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"/>
+
+        <!-- 2D & 3D Shape Calculators -->
+        <activity
+            android:name=".Shapes2DActivity"
+            android:exported="false"
+            android:label="2D Shapes"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".Shapes3DActivity"
+            android:exported="false"
+            android:label="3D Geometry"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"/>
+            
+        <!-- Essential Tools -->
+        <activity
+            android:name=".OpenUrlActivity"
+            android:exported="false"
+            android:label="Open URL"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".OpenFileActivity"
+            android:exported="false"
+            android:label="Open File"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".UrlShortenerActivity"
+            android:exported="false"
+            android:label="Shorten URL"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".WhatsappUnsavedActivity"
+            android:exported="false"
+            android:label="WhatsApp without saving number"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".GmailRouterActivity"
+            android:exported="false"
+            android:label="Gmail Compose"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".CompassActivity"
+            android:exported="false"
+            android:label="Compass"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity
+            android:name=".PixelFramesActivity"
+            android:exported="false"
+            android:label="Pixel Frames"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity
+            android:name=".LaptopFramesActivity"
+            android:exported="false"
+            android:label="Laptop Frames"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"/>
+
+        <activity
+            android:name=".SupportActivity"
+            android:exported="false"
+            android:label="Support Development"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:parentActivityName=".MainActivity"/>
+
+        <!-- File & Image Tools Share Sheet Receiver -->
+        <activity
+            android:name=".ImageToolsShareActivity"
+            android:exported="true"
+            android:label="Essential Shortcuts"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:parentActivityName=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="image/*" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="application/pdf" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="video/*" />
+            </intent-filter>
+            <!-- Word Documents (.docx) -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="application/vnd.openxmlformats-officedocument.wordprocessingml.document" />
+            </intent-filter>
+            <!-- Legacy Word Documents (.doc) -->
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="application/msword" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <action android:name="android.intent.action.SEND_MULTIPLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="application/vnd.ms-word" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="application/x-msword" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="application/doc" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="application/docx" />
+            </intent-filter>
+        </activity>
+
+        <!-- Color Tools -->
+        <activity
+            android:name=".ImageColorPickerActivity"
+            android:exported="false"
+            android:label="Pick color from image"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".ColorPickerActivity"
+            android:exported="false"
+            android:label="Pick color"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:parentActivityName=".MainActivity"/>
+        <activity
+            android:name=".BlendColorsActivity"
+            android:exported="false"
+            android:label="Blend Colors"
+            android:theme="@style/Theme.ClaudeEssential.Popup"
+            android:windowSoftInputMode="adjustResize"
+            android:parentActivityName=".MainActivity"/>
+
+        <!-- QR / Barcode Scanner -->
+        <activity
+            android:name=".ScannerActivity"
+            android:exported="false"
+            android:label="Scanner"
+            android:theme="@style/Theme.ClaudeEssential"
+            android:screenOrientation="portrait"
+            android:parentActivityName=".MainActivity"/>
+
+        <!-- Widget Provider -->
+        <receiver
+            android:name=".ToolsWidgetProvider"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+                <action android:name="com.essential.shortcuts.ACTION_TOOL_CLICK" />
+            </intent-filter>
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/tools_widget_info" />
+        </receiver>
+
+        <!-- Widget Tap Animation Bridge -->
+        <activity
+            android:name=".WidgetLaunchActivity"
+            android:exported="false"
+            android:label=""
+            android:theme="@style/Theme.ClaudeEssential.WidgetLaunch"
+            android:taskAffinity=""
+            android:excludeFromRecents="true" />
+
+        <!-- Widget Configuration Activity -->
+        <activity
+            android:name=".WidgetConfigActivity"
+            android:exported="true"
+            android:label="Configure Widget"
+            android:theme="@style/Theme.ClaudeEssential">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_CONFIGURE" />
+            </intent-filter>
+        </activity>
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
+        <!-- Email Schedule Receiver -->
+        <receiver
+            android:name=".EmailScheduleReceiver"
+            android:exported="false" />
+
+        <!-- Boot Completed Re-scheduler -->
+        <receiver
+            android:name=".BootReceiver"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

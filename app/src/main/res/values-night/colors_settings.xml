@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Settings page backgrounds — DARK MODE (original values) -->
+    <color name="settings_dark_bg">#000000</color>
+    <color name="settings_row_dark_bg">#1C1C1E</color>
+    <color name="settings_divider_dark">#38383A</color>
+    <color name="settings_text_primary_dark">#FFFFFF</color>
+    <color name="settings_text_secondary_dark">#8E8E93</color>
+    <color name="settings_text_yellow">#FFCC00</color>
+    <color name="settings_blur_overlay">#40000000</color>
+    <!-- Navigation/accent color — yellow is fine on dark backgrounds -->
+    <color name="settings_nav_accent">#FFCC00</color>
+
+    <!-- Icon colors — same in both modes -->
+    <color name="settings_icon_blue">#0A84FF</color>
+    <color name="settings_icon_gray">#8E8E93</color>
+    <color name="settings_icon_orange">#FF9500</color>
+    <color name="settings_icon_teal">#5AC8FA</color>
+    <color name="settings_icon_green">#34C759</color>
+    <color name="settings_icon_red">#FF3B30</color>
+    <color name="settings_icon_yellow">#FFCC00</color>
+
+    <color name="settings_premium_start">#D93B30</color>
+    <color name="settings_premium_end">#E3A824</color>
+</resources>
